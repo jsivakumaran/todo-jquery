@@ -1,24 +1,16 @@
 $(document).ready(function() {
-  $("form#new-task").submit(function(event) {
+  $("form#form").submit(function(event) {
     event.preventDefault();
 
     var inputtedTask = $("input#task").val();
-    var inputtedDescription = $("input#description").val();
+    var newTask = { task: inputtedTask };
 
-    var newTask = { task: inputtedTask, description: inputtedDescription }
-
-    $("#tasks").append("<input type='checkbox' class='checkbox'>"
-    + "<span class='task'>"
-    + newTask.task + "</span> - <span class='description'>"
-    + newTask.description + "</span><br>"
-    );
+    $("ul.tasks").append("<li><span class='task'>" + newTask.task + "</span></li>");
 
     $("input#task").val("");
-    $("input#description").val("");
 
-    $("#tasks").children(".task").click(function() {
+    $(".tasks li").last().click(function() {
       $(this).css('text-decoration', 'line-through');
-      // $(this).addClass()
     });
   });
 });
