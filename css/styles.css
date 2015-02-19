@@ -14,3 +14,7 @@
 .add-task {
   display: none;
 }
+
+h2 {
+  text-decoration: underline;
+}
