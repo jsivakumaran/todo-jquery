@@ -6,14 +6,15 @@ var List = {
 $(document).ready(function() {
   var currentList = Object.create(List);
 
-  var displayTasks = function(){
+  var displayTasks = function() {
     $("ul.tasks").text("");
-    if(currentList.tasks.length>0){
+    if(currentList.tasks.length > 0) {
       currentList.tasks.forEach(function(task) {
         $("ul.tasks").append("<li><span class='task'>" + task.task + "</span></li>");
       });
     }
   }
+
   $("form#form-list").submit(function(event) {
     event.preventDefault();
 
@@ -27,21 +28,15 @@ $(document).ready(function() {
 
     $('.list').last().click(function() {
 
-      // $("")
+      $(".add-task").show();
+
+      currentList = newList;
 
       displayTasks();
 
       $(".tasksdisplay h2").text(newList.list);
-
-      currentList = newList;
-
-
     });
   });
-
-
-
-
 
   $("form#form-task").submit(function(event) {
     event.preventDefault();
@@ -51,20 +46,12 @@ $(document).ready(function() {
 
     currentList.tasks.push(newTask);
 
+    displayTasks();
 
-displayTasks();
-    // $("ul.tasks").text("");
-    // currentList.tasks.forEach(function(task) {
-    //   $("ul.tasks").append("<li><span class='task'>" + task.task + "</span></li>");
-    // });
-
-// $("ul.tasks").append("<li><span class='task'>" + newTask.task + "</span></li>");
-
-    $(".tasks li").last().click(function() {
+    $(".task").last().click(function() {
       $(this).css('text-decoration', 'line-through');
     });
 
     $("input#task").val("");
-
   });
 });
