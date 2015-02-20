@@ -23,6 +23,8 @@
 .list {
   cursor: pointer;
   color: #465EAC;
+  font-weight: bold;
+  font-size: 12pt;
 }
 
 .add-task {
