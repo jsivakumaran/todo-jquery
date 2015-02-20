@@ -1,3 +1,17 @@
+.lists-display  {
+  background:rgba(500,500,500,0.6);
+  color: #44391B;
+  height: 500px;
+}
+
+.tasksdisplay {
+  background:rgba(500,500,500,0.6);
+  color: #44391B;
+  height: 500px;
+  display: none;
+  margin: 0px 0px 0px 40px;
+}
+
 .done {
   text-decoration: line-through;
 }
@@ -8,7 +22,7 @@
 
 .list {
   cursor: pointer;
-  color: blue;
+  color: #465EAC;
 }
 
 .add-task {
@@ -17,4 +31,11 @@
 
 h2 {
   text-decoration: underline;
+}
+
+body {
+  background-image: url(img/garden.jpg);
+  color: white;
+  background-repeat: no-repeat;
+  font-family: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
 }

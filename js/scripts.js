@@ -29,6 +29,7 @@ $(document).ready(function() {
     $('.list').last().click(function() {
 
       $(".add-task").show();
+      $(".tasksdisplay").show();
 
       currentList = newList;
 
